@@ -4,8 +4,8 @@ package Pages.Web.TxEcommerce;
 import org.openqa.selenium.By;
 
 public class AddtowishlistPage {
-    public static By HelloSignInOption = By.xpath("//span[text()='Hello1, Sign In |']");
-    public static By Login_option = By.xpath("(//span[text()='Login1'])[1]");
+    public static By HelloSignInOption = By.xpath("//span[text()='Hello, Sign In |']");
+    public static By Login_option = By.xpath("(//span[text()='Login'])[1]");
     public static By LoginPageHeading = By.xpath("(//span[text()='Login'])[2]");
     public static By Email = By.xpath("//*[@id='validationFormik01']");
     public static By Password = By.xpath("//*[@id='validationFormik02']");
