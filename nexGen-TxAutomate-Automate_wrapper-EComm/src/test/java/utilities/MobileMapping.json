@@ -1,0 +1,12 @@
+{
+    "launch":"DriverUtil.invokeLocalMobileApp(exeEnv,deviceDetails)",
+    "enter":"MobileKeywords2.writeInInput(path, type, data, logstep)",
+    "click": "MobileKeywords2.click(locator,type,logStep)",
+    "homeLogo": "MobileKeywords2.isWebElementVisible(locator,type,logstep)",
+    "accountBalance":"MobileKeywords2.fetchAccountBalance(locator,type)",
+    "accountBalanceAfterPayment": "MobileKeywords2.accountBalanceAfterPayment(value)",
+    "validateAmountAfterPayment": "MobileKeywords2.validateAmountAfterPayment()",
+    "scrollDownYearlyIncome": "MobileKeywords2.scrollDownYearlyIncome()",
+    "scrollDownTillEnd": "MobileKeywords2.scrollDownTillEnd()"
+
+}

@@ -1,0 +1,18 @@
+{
+	"fields": {
+		"project": {
+			"key": "--EDIT ME--"
+		},
+		"summary": "--EDIT ME--",
+		"description": "--EDIT ME--",
+		"issuetype": {
+			"name": "--EDIT ME--"
+		},
+		"labels": [
+		],
+		"environment": "--EDIT ME--",
+		"priority": {
+			"name": "--EDIT ME--"
+		}
+	}
+}

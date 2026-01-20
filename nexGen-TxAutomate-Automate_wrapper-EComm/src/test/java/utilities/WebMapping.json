@@ -1,0 +1,15 @@
+{
+    "navigate": "KeywordUtil.navigateToUrl(url)",
+    "click": "KeywordUtil.click(locator, logStep)",
+    "input": "KeywordUtil.inputText(locator, logStep)",
+    "verify": "KeywordUtil.verifyDisplayAndEnable(locator, logStep)",
+    "scrollAndClick": "KeywordUtil.scrollAndClick(locator, logStep)",
+    "switchToFrameAndClick": "KeywordUtil.switchToFrameAndClick(frameLocator, buttonLocator, logStep)",
+    "enabled":"KeywordUtil.isWebElementEnable(locator, logStep)",
+    "visible":"KeywordUtil.isWebElementVisible(locator, logStep)",
+    "present":"KeywordUtil.isWebElementPresent(locator, logStep)",
+    "hover":"KeywordUtil.hoverOnElement(locator)",
+    "selected":"KeywordUtil.isRadioSelected(locator, logStep)",
+    "switch":"KeywordUtil.switchToFrame(locator)"
+
+}

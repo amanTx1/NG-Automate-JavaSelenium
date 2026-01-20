@@ -1,0 +1,32 @@
+# Maven
+# Build your Java project and run tests with Apache Maven.
+trigger:
+- Ng-TxAutomate
+pool:
+  vmImage: Default
+steps:
+- checkout: self  # Ensure your repository is checked out to have access to the JAR files
+- script: |
+    echo "Listing files in the root directory:"
+    dir
+    echo "Listing files in the lib directory:"
+    dir lib
+  displayName: 'List files in working directory'
+- script: |
+    mvn install:install-file -Dfile=lib/jira-rest-client-0.5.jar -DgroupId=com.extjar.framework -DartifactId=jira-rest-client -Dversion=0.5 -Dpackaging=jar
+    mvn install:install-file -Dfile=lib/zfj-cloud-rest-client-1.0.jar -DgroupId=com.extjar.framework -DartifactId=zephyr-restutil -Dversion=1.0 -Dpackaging=jar
+    mvn install:install-file -Dfile=lib/net-sf-json-lib.jar -DgroupId=net.sf.json-lib -DartifactId=json-lib -Dversion=2.4 -Dpackaging=jar -Dclassifier=jdk15
+  displayName: 'Install local JARs to Maven repository'
+  workingDirectory: $(System.DefaultWorkingDirectory)
+- task: Maven@4
+  displayName: 'Maven pom.xml'
+  inputs:
+    mavenPomFile: 'pom.xml'
+    mavenOptions: '-Xmx3072m'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.17'
+    jdkArchitectureOption: 'x64'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    goals: 'clean install'
+    options: '-Dcucumber.filter.tags="@TestCase"'

@@ -1,0 +1,5 @@
+mvn install:install-file -Dfile=zfj-cloud-rest-client-1.0.jar -DgroupId=com.extjar.framework -DartifactId=zephyr-restutil -Dversion=1.0 -Dpackaging=jar
+mvn install:install-file -Dfile=jira-rest-client-0.5.jar -DgroupId=com.extjar.framework -DartifactId=jira-rest-client -Dversion=0.5 -Dpackaging=jar
+mvn install:install-file -Dfile=net-sf-json-lib.jar -DgroupId=com.extjar.framework -DartifactId=net-sf-json -Dversion=1.0 -Dpackaging=jar
+
+
